@@ -3,15 +3,21 @@ const cors = require("cors")
 const morgan = require("morgan")
 const { PORT } = require("./config")
 const authRoutes = require("./routes/auth")
-
+const security = require("./middleware/security")
 const {BadRequestError, NotFoundError} = require("./utils/errors")
-
 const app = express()
+
+
+
 app.use(express.json())
 app.use(cors())
-// app.use(express.json())
+// logs request info
 app.use(morgan("tiny"))
+// for every request, check if a token exists in the authorization header
+// if it does, attach the decoded user to res.locals
+app.use(security.extractUserFromJwt)
 app.use("/auth", authRoutes)
+
 app.use((req, res, next) => {
     return next(new NotFoundError())
 })
@@ -29,4 +35,12 @@ app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`)
 })
 
-// set PORT in terminal with PORT=9999 nodemon server.js
+// set PORT in terminal with PORT=3000 nodemon server.js
+// FOR TERMINAL
+// psql -f lifetracker
+// psql
+// \c lifetracker - t connect to lifetracker database
+// \d+ - to see tables
+// SELECT * FROM users - to see the content of users table
+// \d+ users - to see the datatypes of the columns
+// \q - to quit

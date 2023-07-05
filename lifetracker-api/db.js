@@ -2,7 +2,16 @@ const {Client} = require("pg") // importing client from db package (node postgre
 const { getDatabaseUri } = require("./config")
 require("colors")
 
-const db = new Client({connectionstring : getDatabaseUri()})
+
+// const db = new Client({connectionstring : getDatabaseUri()})
+
+const db = new Client({
+    user: "fonukogu",
+    password: "postgres",
+    host: "localhost",
+    port: 5432,
+    database: "lifetracker"
+})
 
 db.connect((err) => {
     if (err) {
