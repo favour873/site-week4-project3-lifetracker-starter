@@ -6,7 +6,7 @@ const authRoutes = require("./routes/auth")
 const security = require("./middleware/security")
 const {BadRequestError, NotFoundError} = require("./utils/errors")
 const app = express()
-
+const nutritionRoutes = require("./routes/nutrition")
 
 
 app.use(express.json())
@@ -17,6 +17,7 @@ app.use(morgan("tiny"))
 // if it does, attach the decoded user to res.locals
 app.use(security.extractUserFromJwt)
 app.use("/auth", authRoutes)
+app.use("/nutrition", nutritionRoutes)
 
 app.use((req, res, next) => {
     return next(new NotFoundError())
