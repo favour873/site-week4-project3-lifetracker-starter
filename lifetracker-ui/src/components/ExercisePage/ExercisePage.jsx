@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import "./ExercisePage.css";
 
 const ExercisePage = () => {
-  return (
-    <div>ExercisePage</div>
-  )
-}
+  return <div className="exercise-page"></div>;
+};
 
-export default ExercisePage
+export default ExercisePage;

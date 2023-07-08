@@ -5,21 +5,20 @@ import { useNavigate } from "react-router-dom";
 const LoginForm = ({ onLogin, error }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     onLogin(email, password);
-    navigate("/activity")
+    navigate("/activity");
   };
 
   return (
     <div className="login-form">
-
-      <h2>Login</h2>
       {error && <p className="error-message">{error}</p>}
 
-      <form onSubmit={handleSubmit}>
+      <form className="login" onSubmit={handleSubmit}>
+        <h3>Login</h3>
 
         <label>Email:</label>
         <input
@@ -39,9 +38,11 @@ const LoginForm = ({ onLogin, error }) => {
           required
         />
 
-        <button className="submit-login" type="submit"> Login </button>
+        <button className="submit-login" type="submit">
+          {" "}
+          Login{" "}
+        </button>
       </form>
-      
     </div>
   );
 };

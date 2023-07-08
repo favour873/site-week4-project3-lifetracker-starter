@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const SleepPage = () => {
-  return (
-    <div>SleepPage</div>
-  )
-}
+  return <div></div>;
+};
 
-export default SleepPage
+export default SleepPage;

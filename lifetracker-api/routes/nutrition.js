@@ -6,9 +6,7 @@ const Nutrition = require("../models/nutrition");
 
 router.post("/", async (req, res, next) => {
   try {
-    console.log(req.body);
     const nutrition = await Nutrition.createNutrition(req.body);
-    console.log(nutrition);
 
     return res.status(201).json({
       message: "Nutrition row added successfully",
@@ -18,6 +16,18 @@ router.post("/", async (req, res, next) => {
     console.error("Error adding nutrition row: ", error);
     res.status(500).json({ message: "Error adding nutrition row: " });
     next(error);
+  }
+});
+
+router.get("/:id", async function (req, res, next) {
+  try {
+    const { id } = req.params;
+    // console.log(req);
+    const userNutritionData = await Nutrition.fetchNutritionById(id);
+    // console.log(userNutritionData);
+    return res.status(200).json({ userNutritionData });
+  } catch (err) {
+    next(err);
   }
 });
 

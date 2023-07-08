@@ -1,19 +1,29 @@
-import React from 'react'
-import "./ActivityFeed.css"
+import React, { useEffect } from "react";
+import "./ActivityFeed.css";
 
-const ActivityFeed = ({ totalCaloriesPerDay, avgCaloriesPerCategory }) => {
+const ActivityFeed = ({ onGet, userId, totalCaloriesPerDay, avgCalories }) => {
+  useEffect(() => {
+    onGet(userId);
+  }, [userId]);
+
   return (
     <div className="activity-feed">
-        ActivityFeed
-        <div className="per-category">
-            <h4> Average Calories Per Category </h4>
-        </div>
-
-        <div className="per-day">
-            <h4> Total Calories Per Day </h4>
-        </div>
+      <h1> Activity Feed </h1>
+      <div className="per-category">
+        {avgCalories ? (
+          <>
+            {" "}
+            <h3 className="activity-calories">
+              {" "}
+              Average Calories: <br></br> {Number(avgCalories).toFixed(2)}{" "}
+            </h3>{" "}
+          </>
+        ) : (
+          <h3 className="actvity-no-data"> No Nutrition (Calories) Data Yet</h3>
+        )}
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ActivityFeed
+export default ActivityFeed;

@@ -1,19 +1,10 @@
-/* ul {
-  list-style-type: none;
-}
-
-li a {
-  padding: 20px 20px;
-  color: rgb(91, 68, 42);
-  text-align: center;
-  text-decoration: none;
-}  */
-
 .navbar {
   background-color: #e4bd8d;
   width: 100%;
   display: flex;
   font-family: "Papyrus", monospace;
+  overflow: hidden;
+  margin: -10px;
 }
 
 nav {
@@ -26,11 +17,20 @@ nav a {
   text-decoration: none;
   padding: 20px 50px;
   color: rgb(91, 68, 42);
+  float: left;
+  display: block;
+  text-align: center;
+  font-size: 17px;
 }
 
 nav a.active {
   background: #ffeed999;
   border-radius: 20px;
+}
+
+.nav a:hover {
+  background-color: #ffeed999;
+  color: black;
 }
 
 .username {
@@ -48,10 +48,10 @@ nav a.active {
 }
 
 .sign-out button {
-  padding: 0; 
+  padding: 0;
   margin: 0;
   border: none;
   color: rgb(91, 68, 42);
-  background-color:transparent;
+  background-color: transparent;
   font-family: "Papyrus", monospace;
 }

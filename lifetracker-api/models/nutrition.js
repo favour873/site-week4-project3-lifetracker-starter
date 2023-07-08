@@ -54,13 +54,15 @@ class Nutrition {
     if (!id) {
       throw new BadRequestError("No ID provided");
     }
-    let query = `SELECT * FROM nutrition WHERE id = $1`;
+    let query = `SELECT * FROM nutrition WHERE userid = $1`;
     const result = await db.query(query, [id]);
+
+    const instance = result.rows;
 
     if (!instance) {
       throw new NotFoundError(`No nutrition info with that ID`);
     }
-    const instance = result.rows[0];
+
     return instance;
   }
 }

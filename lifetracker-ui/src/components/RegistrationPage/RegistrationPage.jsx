@@ -1,13 +1,13 @@
-import React from 'react'
-import "./RegistrationPage.css"
-import RegistrationForm from '../RegistrationForm/RegistrationForm'
+import React from "react";
+import "./RegistrationPage.css";
+import RegistrationForm from "../RegistrationForm/RegistrationForm";
 
 const RegistrationPage = ({ onRegister, username }) => {
   return (
     <div className="registration-page">
-        <RegistrationForm onRegister={onRegister}/>
+      <RegistrationForm onRegister={onRegister} />
     </div>
-  )
-}
+  );
+};
 
-export default RegistrationPage
+export default RegistrationPage;

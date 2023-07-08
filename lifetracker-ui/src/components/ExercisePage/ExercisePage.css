@@ -4,3 +4,7 @@
 .ExercisePage .button button {
   flex: 1;
 }
+
+.exercise-page {
+  background-color: #fff3e3;
+}
