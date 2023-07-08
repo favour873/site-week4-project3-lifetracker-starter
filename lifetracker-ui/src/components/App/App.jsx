@@ -45,13 +45,16 @@ function App() {
 
   const handleLogin = async (email, password) => {
     try {
-      const response = await fetch("http://localhost:3001/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const response = await fetch(
+        "https://lifetracker-api-9ifj.onrender.com/auth/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await response.json();
       if (response.status === 200) {
@@ -85,19 +88,22 @@ function App() {
     email
   ) => {
     try {
-      const response = await fetch("http://localhost:3001/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username,
-          password,
-          firstname,
-          lastname,
-          email,
-        }),
-      });
+      const response = await fetch(
+        "https://lifetracker-api-9ifj.onrender.com/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            username,
+            password,
+            firstname,
+            lastname,
+            email,
+          }),
+        }
+      );
 
       const data = await response.json();
       if (response.status === 201) {
@@ -130,20 +136,23 @@ function App() {
     try {
       console.log(form);
       const { name, quantity, calories, imageurl, category } = form;
-      const response = await fetch("http://localhost:3001/nutrition", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          quantity,
-          calories,
-          imageurl,
-          category,
-          userId,
-        }),
-      });
+      const response = await fetch(
+        "https://lifetracker-api-9ifj.onrender.com/nutrition",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            quantity,
+            calories,
+            imageurl,
+            category,
+            userId,
+          }),
+        }
+      );
       const data = await response.json();
       console.log(data);
     } catch (error) {
@@ -154,7 +163,7 @@ function App() {
   const handleGetNutrition = async (userId) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/nutrition/${userId}`,
+        `https://lifetracker-api-9ifj.onrender.com/nutrition/${userId}`,
         {
           method: "GET",
           headers: {
@@ -171,12 +180,15 @@ function App() {
 
   const handleGetAvgCalories = async (userId) => {
     try {
-      const response = await fetch(`http://localhost:3001/activity/${userId}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        `https://lifetracker-api-9ifj.onrender.com/activity/${userId}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const data = await response.json();
       setAvgCalories(data.avgCalories);
     } catch (error) {
