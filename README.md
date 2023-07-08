@@ -1,13 +1,5 @@
 # Project #3: LifeTracker Application
 
-## App Walkthrough Video
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/64fe5318d433405fba0866ffbd16484f?sid=340e4145-c8d7-47e7-a3f0-51e82810deb6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
-## Deployment, Security Middleware, Average Statistic Activity Walkthrough
-
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/386a16983bf445668df48f3ea866ff93?sid=c76b7ecd-616d-4a07-8e7b-4f9b419fbde4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
 ## Overview
 
 > Data is the new oil - Clive Humbly
@@ -57,6 +49,14 @@ Implement any of the following features to improve the application:
 - [ ] Calculate aggregate statistics based on time periods - such as daily, weekly, monthly aggregates.
 - [ ] Create a page that shows all other users that use the LifeTracker application and allow users to follow each other. You'll want to create a new table to store this data.
 - [x] Implement `security` middleware on the API that allows only authenticated users to access resources and allows users to only access resources about themselves.
+
+<!-- App Walkthrough Video -->
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/64fe5318d433405fba0866ffbd16484f?sid=340e4145-c8d7-47e7-a3f0-51e82810deb6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+<!-- Deployment, Security Middleware, Average Statistic Activity Walkthrough -->
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/386a16983bf445668df48f3ea866ff93?sid=c76b7ecd-616d-4a07-8e7b-4f9b419fbde4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Building the app
 
