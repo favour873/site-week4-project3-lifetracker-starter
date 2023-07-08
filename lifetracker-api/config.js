@@ -20,13 +20,11 @@ function getDatabaseUri() {
 
   // if the DATABASE_URL, use that otherwise create the db
   // connection string ourselves
-  return (
-    process.env.DATABASE_URL ||
-    `postgres://favour:wkHvbLNrKe8YRTeaFFxttPqiFQO8Y1TO@dpg-cikc5bdgkuvinfiiu470-a/lifetracker_oert`
-  );
+  return "postgres://favour:wkHvbLNrKe8YRTeaFFxttPqiFQO8Y1TO@dpg-cikc5bdgkuvinfiiu470-a/lifetracker_oert";
   // return process.env.DATABASE_URL ||`postgres://${dbUser}@${dbHost}:${dbPort}`
 }
 
+// hello world
 const BCRYPT_WORK_FACTOR = 13;
 
 // console.log("process.env".yellow, Object.keys(process.env))
