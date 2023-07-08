@@ -205,7 +205,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route
-              path="signin"
+              path="/signin"
               element={
                 <LoginPage
                   username={userName}
@@ -215,7 +215,7 @@ function App() {
               }
             />
             <Route
-              path="register"
+              path="/register"
               element={
                 <RegistrationPage
                   username={userName}
@@ -228,7 +228,7 @@ function App() {
               loggedIn ? (
                 <>
                   <Route
-                    path="activity"
+                    path="/activity"
                     element={
                       <ActivityPage
                         userId={userId}
@@ -237,9 +237,9 @@ function App() {
                       />
                     }
                   />
-                  <Route path="exercise" element={<ExercisePage />} />
+                  <Route path="/exercise" element={<ExercisePage />} />
                   <Route
-                    path="nutrition"
+                    path="/nutrition"
                     element={
                       <NutritionPage
                         userId={userId}
@@ -250,7 +250,7 @@ function App() {
                       />
                     }
                   />
-                  <Route path="sleep" element={<SleepPage />} />
+                  <Route path="/sleep" element={<SleepPage />} />
                 </>
               ) : null
               // <Route path="login"> element={<LoginPrompt />} </Route>
