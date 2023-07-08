@@ -1,27 +1,26 @@
-const {Client} = require("pg") // importing client from db package (node postgres package)
-const { getDatabaseUri } = require("./config")
-require("colors")
-
+const { Client } = require("pg"); // importing client from db package (node postgres package)
+const { getDatabaseUri } = require("./config");
+require("colors");
 
 // const db = new Client({connectionstring : getDatabaseUri()})
 
 const db = new Client({
-    user: "fonukogu",
-    password: "postgres",
-    host: "localhost",
-    port: 5432,
-    database: "lifetracker"
-})
+  user: "favour",
+  password: "wkHvbLNrKe8YRTeaFFxttPqiFQO8Y1TO",
+  host: "dpg-cikc5bdgkuvinfiiu470-a",
+  port: 5432,
+  database: "lifetracker_oert",
+});
 
 db.connect((err) => {
-    if (err) {
-        console.error("connection.error".red, err.stack)
-    } else {
-        console.log("Successfully connected to postgres db!".blue)
-    }
-})
+  if (err) {
+    console.error("connection.error".red, err.stack);
+  } else {
+    console.log("Successfully connected to postgres db!".blue);
+  }
+});
 
-module.exports = db
+module.exports = db;
 
 // EXPLANATION OF ABOVE CODE
 // Part 1: Connecting to the database
