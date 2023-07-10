@@ -58,6 +58,9 @@ Implement any of the following features to improve the application:
 
 <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/386a16983bf445668df48f3ea866ff93?sid=c76b7ecd-616d-4a07-8e7b-4f9b419fbde4" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
+<!-- Logo Homepage on Navbar -->
+<div style="position: relative; padding-bottom: 52.34375%; height: 0;"><iframe src="https://www.loom.com/embed/76b2c46d7de3425286217d97e87e87cb?sid=f58aef5e-dd0a-4b4a-b96c-723f8c158fa2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ### Building the app
 
 #### The `App` Component

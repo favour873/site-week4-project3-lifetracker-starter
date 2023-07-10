@@ -1,0 +1,13 @@
+.logo img {
+  width: 100px;
+  height: auto;
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 100px;
+}
+
+.logo a {
+  margin: -20px;
+  padding: 0px;
+}

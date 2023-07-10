@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./Navbar.css";
-// import Logo from "../Logo/Logo"
+import Logo from "../Logo/Logo";
 // import Home from "../Home/Home"
 import {
   BrowserRouter as Router,
@@ -15,8 +15,7 @@ export default function Navbar({ username, handleLogout }) {
     <div className="navbar">
       <nav>
         <NavLink to="/" className="logo">
-          {" "}
-          Home{" "}
+          <Logo />
         </NavLink>
         <NavLink to="/activity"> Activity </NavLink>
         <NavLink to="/exercise"> Exercise </NavLink>
