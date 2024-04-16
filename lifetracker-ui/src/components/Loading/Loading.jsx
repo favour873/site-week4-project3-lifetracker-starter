@@ -5,6 +5,7 @@ const Loading = () => {
   return (
     <div className='loading'>
         <p className="loading-message"> Loading... </p>
+        
     </div>
   )
 }
